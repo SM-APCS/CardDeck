@@ -1,21 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package carddeck;
 
-/**
- *
- * @author Kurt
- */
-public class CardDeck {
+//********************************************************************
+//  CardDeck.java
+//
+//  Solution to Programming Project 6.8
+//********************************************************************
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public class CardDeck
+{
+   //-----------------------------------------------------------------
+   //  Creates a deck, shuffles the deck and deals the cards.
+   //-----------------------------------------------------------------
+   public static void main (String args[])
+   {
+      Deck deck = new Deck();
+
+      deck.shuffle();
+
+      int cardNumber = 0;
+
+      System.out.println("Dealing shuffled cards:");
+      while (deck.hasMoreCards())
+         System.out.println("   " + ++cardNumber + ": " + deck.deal());
+
+   }
 }
